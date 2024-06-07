@@ -1,0 +1,17 @@
+# Exported from Render on 2024-06-04T08:57:53Z
+services:
+- type: web
+  name: DiscordBot
+  runtime: python
+  repo: https://github.com/nxc1802/DiscordBot
+  plan: free
+  envVars:
+  - key: CHANNEL_ID
+    sync: false
+  - key: DISCORD_TOKEN
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: /start.sh
+  rootDir: ./
+version: "1"
